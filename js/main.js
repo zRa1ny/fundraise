@@ -3,42 +3,40 @@
 //绑定window.onload 隐藏loading
 //第一时间执行，不能放置到windown.onload中
 setRemAndHideLoading(document, window);
-window.onload = function() {
-        // alert("onload")
-    }
-    // 实例化swiper对象
-    //    var mySwiper = new Swiper('.swiper-container',{
-    //        //Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)
-    //        direction: 'vertical',
-    //        //将hashnav设置为true，并在每个slide处增加data-hash属性，可在当前页刷新。
-    //        hashnav:true,
-    //        onInit: function(swiper){
-    //            swiperAnimateCache(swiper);
-    //            swiperAnimate(swiper);
-    //            $('.page-L').scrollTop(0);
-    //        },
-    //        onSlideChangeEnd: function(swiper){
-    //            swiperAnimate(swiper);
-    //          $('.page-L').scrollTop(0);
-    //        }
-    //    });
-    //    // 引导页的enter键点击划入第二页
-    //    $('#s1 .enter img').on('click',function(event) {
-    //        mySwiper.slideTo(1,1000,false);
-    //        swiperAnimateCache(mySwiper);
-    //        swiperAnimate(mySwiper);
-    //    });
-    // // 需要局部滚动的页面，阻止事件冒泡 -- 阻止swiper滑动
-    //    $('.info').on('touchmove',function(){
-    //        event.stopPropagation();
-    //    });
-    /***************************************** 地图 ***************************************************/
-    //添加公司地址位置，修改公司地址方法如下：
-    // http://api.map.baidu.com/lbsapi/creatmap/index.html，该地址是百度地图生成器，
-    //打开网址后，将公司地址输入，获取到横纵坐标，请“coord=25.015643,102.753885”替换为获取到的横纵坐标，title替换为公司名称
-    // $('.map').click(function() {
-    //     location.href = 'http://api.map.baidu.com/marker?location=31.184249,121.416137&title=延锋伟世通电子科技（上海）有限公司&content=徐汇区钦州北路1001号&output=html';
-    // });
+
+// 实例化swiper对象
+//    var mySwiper = new Swiper('.swiper-container',{
+//        //Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)
+//        direction: 'vertical',
+//        //将hashnav设置为true，并在每个slide处增加data-hash属性，可在当前页刷新。
+//        hashnav:true,
+//        onInit: function(swiper){
+//            swiperAnimateCache(swiper);
+//            swiperAnimate(swiper);
+//            $('.page-L').scrollTop(0);
+//        },
+//        onSlideChangeEnd: function(swiper){
+//            swiperAnimate(swiper);
+//          $('.page-L').scrollTop(0);
+//        }
+//    });
+//    // 引导页的enter键点击划入第二页
+//    $('#s1 .enter img').on('click',function(event) {
+//        mySwiper.slideTo(1,1000,false);
+//        swiperAnimateCache(mySwiper);
+//        swiperAnimate(mySwiper);
+//    });
+// // 需要局部滚动的页面，阻止事件冒泡 -- 阻止swiper滑动
+//    $('.info').on('touchmove',function(){
+//        event.stopPropagation();
+//    });
+/***************************************** 地图 ***************************************************/
+//添加公司地址位置，修改公司地址方法如下：
+// http://api.map.baidu.com/lbsapi/creatmap/index.html，该地址是百度地图生成器，
+//打开网址后，将公司地址输入，获取到横纵坐标，请“coord=25.015643,102.753885”替换为获取到的横纵坐标，title替换为公司名称
+// $('.map').click(function() {
+//     location.href = 'http://api.map.baidu.com/marker?location=31.184249,121.416137&title=延锋伟世通电子科技（上海）有限公司&content=徐汇区钦州北路1001号&output=html';
+// });
 
 
 /***************************************** 音乐播放 ***************************************************/
@@ -111,7 +109,7 @@ function setRemAndHideLoading(doc, win) {
     // var docEl = win.document.documentElement;
     // var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
     // 设置根元素font-size 当设备宽度为375(iPhone6)时，根元素font-size=16px; 
-    var refreshRem = function() {
+    var refreshRem = function () {
         var clientWidth = win.innerWidth || doc.documentElement.clientWidth || doc.body.clientWidth;
         if (!clientWidth) return;
         var width = clientWidth; // 
@@ -119,7 +117,7 @@ function setRemAndHideLoading(doc, win) {
         // alert(fz)
         docEl.style.fontSize = fz + 'px';
     };
-    var hideLoading = function() {
+    var hideLoading = function () {
         document.getElementById('loading').style.display = 'none';
     }
     if (!doc.addEventListener) return;
