@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 制作人信息 -->
+    <!--PM:[xxx] Designer:[xxx] Developer:[] date:2018xxxx-->
+    <title>希望工程</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="pragma" content="no-cach">
+    <meta name="robots" content="all">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="loading" id="loading">
+        <div class="loadbox">
+            <div class="loadtext">loading</div>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        </div>
+    </div>
+    <div class="page-L swiper-no-swiping" id="page3">
+        <form action="./certificate.html" method="get" id="myform">
+            <div class="form-control">
+                <label class="radio-item">
+                    <input class="money-set" name="money-set" type="radio" value="20" />
+                    <div class="radio-symbol">
+                        <span class="img"></span>
+                        <span class="num">1本书</span>
+                        <span class="love"><i>20</i>元</span>
+                    </div>
+                </label>
+                <img class="logo1" src="./images/page3-logo1.png" alt="" srcset="">
+                <label class="radio-item">
+                    <input class="money-set" name="money-set" type="radio" value="40" />
+                    <div class="radio-symbol">
+                        <span class="img"></span>
+                        <span class="num">2本书</span>
+                        <span class="love"><i>40</i>元</span>
+                    </div>
+                </label>
+            </div>
+            <div class="form-control">
+                <label class="radio-item">
+                    <input class="money-set" name="money-set" type="radio" value="80" />
+                    <div class="radio-symbol">
+                        <span class="img"></span>
+                        <span class="num">4本书</span>
+                        <span class="love"><i>80</i>元</span>
+                    </div>
+                </label>
+                <img class="logo2" src="./images/page3-logo2.png" alt="" srcset="">
+                <label class="radio-item">
+                    <input class="money-set" name="money-set" type="radio" value="120" />
+                    <div class="radio-symbol">
+                        <span class="img"></span>
+                        <span class="num">6本书</span>
+                        <span class="love"><i>120</i>元</span>
+                    </div>
+                </label>
+            </div>
+            <div class="form-control">
+                <label class="radio-item">
+                    <input class="money-set" name="money-set" type="radio" value="400" />
+                    <div class="radio-symbol">
+                        <span class="img"></span>
+                        <span class="num">10本书</span>
+                        <span class="love"><i>400</i>元</span>
+                    </div>
+                </label>
+                <img class="logo3" src="./images/page3-logo3.png" alt="" srcset="">
+                <label class="radio-item">
+                    <input class="money-set" name="money-set" type="radio" value="800" />
+                    <div class="radio-symbol">
+                        <span class="img"></span>
+                        <span class="num">20本书</span>
+                        <span class="love"><i>800</i>元</span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="input-control">
+                <label for="diymoney" class="diymoney-label">自定义金额</label>
+                <div class="diymoeny-value">
+                    <input type="text" placeholder="0" id="diymoney" class="number" name="money">
+                    元
+                </div>
+                <div class="tips">请点击上方图书数量进行选赠或自定义金额</div>
+            </div>
+
+            <div class="input-control">
+                <label for="name" class="diymoney-label">姓名</label>
+                <div class="diymoeny-value">
+                    <input type="text" name="name" placeholder="" id="name">
+                </div>
+
+                <label for="phone" class="diymoney-label margin20">手机号</label>
+                <div class="diymoeny-value">
+                    <input type="text" name="phone" placeholder="" class="phone" id="phone">
+                </div>
+            </div>
+
+            <div class="input-control">
+                <label class="is-need-receipt">
+                    <div>捐款成功后，如需收据请勾选</div>
+                    <div class="receipt-value">
+                        <input type="checkbox" name="receipt" id="receipt">
+                        <div></div>
+                    </div>
+                </label>
+
+                <label for="phone" class="diymoney-label margin20 required receipt-hook">收据抬头</label>
+                <div class="diymoeny-value receipt-hook">
+                    <input type="text" placeholder="请填写收据抬头" name="invoice">
+                </div>
+
+                <label for="phone" class="diymoney-label margin20 required receipt-hook">详细地址</label>
+                <div class="diymoeny-value receipt-hook">
+                    <input type="text" placeholder="请填写详细地址" name="adress">
+                </div>
+
+                <label for="phone" class="diymoney-label margin20 required receipt-hook">收据收件人</label>
+                <div class="diymoeny-value receipt-hook">
+                    <input type="text" placeholder="请填写收据收件人" name="receiptname">
+                </div>
+
+                <label for="phone" class="diymoney-label margin20 required receipt-hook">收件人电话</label>
+                <div class="diymoeny-value receipt-hook">
+                    <input type="text" placeholder="请填写收件人电话" name="receiptphone">
+                </div>
+            </div>
+            <div class="submit-text">
+                <button>确认捐款</button>
+            </div>
+        </form>
+    </div>
+    <script src="./js/jquery-1.10.1.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script>
+        window.onload = function () {
+            
+            $("#receipt").change(function (e) {
+                if ($(this).prop('checked')) {
+                    $('.receipt-hook').css('display', 'block')
+                } else {
+                    $('.receipt-hook').hide()
+                }
+            })
+
+            $('.money-set').change(function (e) {
+                if ($(this).prop('checked')) {
+                    $('input[name=money]').val($(this).val())
+                }
+            })
+
+            $('#diymoney').change(function (e) {
+                var value = $(this).val();
+                $('.money-set').each(function (idx, val) {
+                    if ($(val).val() === value) {
+                        $(val).prop('checked', true)
+                    } else {
+                        $(val).prop('checked', false)
+                    }
+                })
+            })
+
+            $.validator.addMethod("phone", function (value, element) {
+                return /^1[3456789][0-9]{9}$/.test(value)
+            })
+
+            $.validator.addMethod("invoice", function (value, element) {
+                return isNeedReceipt() || value
+            })
+
+            $.validator.addMethod("receiptphone", function (value, element) {
+                return isNeedReceipt() || /^1[3456789][0-9]{9}$/.test(value)
+            })
+
+            function isNeedReceipt() {
+                return !$('#receipt').prop('checked')
+            }
+
+            var validate = $("#myform").validate({
+                debug: true,
+                focusInvalid: false,
+                onkeyup: false,
+                submitHandler: function (form) {
+                    form.submit();
+                },
+                rules: {
+                    money: {
+                        required: true
+                    },
+                    name: {
+                        required: true
+                    },
+                    phone: {
+                        required: true
+                    },
+                    invoice: {
+                        invoice: true
+                    },
+                    adress: {
+                        invoice: true
+                    },
+                    receiptname: {
+                        invoice: true
+                    },
+                    receiptphone: {
+                        receiptphone: true
+                    },
+
+                },
+                messages: {
+                    money: {
+                        required: "必填",
+                        number: "必须输入数值！"
+                    },
+                    name: {
+                        required: "必填",
+                    },
+                    phone: {
+                        required: "必填",
+                        phone: "请正确输入手机号码"
+                    },
+                    invoice: {
+                        invoice: "必填"
+                    },
+                    adress: {
+                        invoice: "必填"
+                    },
+                    receiptname: {
+                        invoice: "必填"
+                    },
+                    receiptphone: {
+                        receiptphone: "输入手机号"
+                    },
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
