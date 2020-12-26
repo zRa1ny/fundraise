@@ -81,7 +81,11 @@ img {
   background: #F5F7F9;
   background-size: 100% 100%;
 }
-#page1 > img {
+#page1 > .banner {
+  width: 100%;
+  height: auto;
+}
+#page1 > .banner > img {
   width: 100%;
   height: auto;
 }
