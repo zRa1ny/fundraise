@@ -137,7 +137,7 @@ img {
 }
 #page1 .list > .item {
   display: flex;
-  margin: 0.5625rem 0;
+  margin: 1.125rem 0;
 }
 #page1 .list > .item > img {
   flex: 0 0 6.625rem;
@@ -556,7 +556,7 @@ img {
 #page3 .input-control > .is-need-receipt > .receipt-value > div {
   width: 1.5625rem;
   height: 1.5625rem;
-  background-color: #B4BECA;
+  background: url(../images/checkbox.png);
   background-size: 100% 100%;
   display: block;
 }
@@ -680,4 +680,5 @@ img {
 .error {
   color: #E6432F;
   white-space: nowrap;
+  font-size: 0.875rem;
 }
