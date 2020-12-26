@@ -31,72 +31,69 @@
         </div>
     </div>
     <div class="page-L swiper-no-swiping" id="page3">
+        <div class="banner-box">
+            <h5>为孩子们的“悦”读角捐赠一本书</h5>
+            <div class="progress">
+                <img src="./images/yes.png" alt="" srcset="">
+                <div class="progress-pipe" data-value="400">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="message">
+                <span>筹款目标：12,000元 </span>
+                <span>累计筹款：11,000元 </span>
+                <span>参与人次：1,001人</span>
+            </div>
+        </div>
         <form action="./certificate.html" method="get" id="myform">
+            <div class="label-text">请选择金额</div>
             <div class="form-control">
                 <label class="radio-item">
                     <input class="money-set" name="money-set" type="radio" value="20" />
                     <div class="radio-symbol">
-                        <span class="img"></span>
-                        <span class="num">1本书</span>
                         <span class="love"><i>20</i>元</span>
                     </div>
                 </label>
-                <img class="logo1" src="./images/page3-logo1.png" alt="" srcset="">
                 <label class="radio-item">
                     <input class="money-set" name="money-set" type="radio" value="40" />
                     <div class="radio-symbol">
-                        <span class="img"></span>
-                        <span class="num">2本书</span>
-                        <span class="love"><i>40</i>元</span>
+                        <span class="love"><i></i>40元</span>
                     </div>
                 </label>
-            </div>
-            <div class="form-control">
+
                 <label class="radio-item">
                     <input class="money-set" name="money-set" type="radio" value="80" />
                     <div class="radio-symbol">
-                        <span class="img"></span>
-                        <span class="num">4本书</span>
                         <span class="love"><i>80</i>元</span>
                     </div>
                 </label>
-                <img class="logo2" src="./images/page3-logo2.png" alt="" srcset="">
                 <label class="radio-item">
                     <input class="money-set" name="money-set" type="radio" value="120" />
                     <div class="radio-symbol">
-                        <span class="img"></span>
-                        <span class="num">6本书</span>
+
                         <span class="love"><i>120</i>元</span>
                     </div>
                 </label>
-            </div>
-            <div class="form-control">
                 <label class="radio-item">
                     <input class="money-set" name="money-set" type="radio" value="400" />
                     <div class="radio-symbol">
-                        <span class="img"></span>
-                        <span class="num">10本书</span>
+
                         <span class="love"><i>400</i>元</span>
                     </div>
                 </label>
-                <img class="logo3" src="./images/page3-logo3.png" alt="" srcset="">
                 <label class="radio-item">
                     <input class="money-set" name="money-set" type="radio" value="800" />
                     <div class="radio-symbol">
-                        <span class="img"></span>
-                        <span class="num">20本书</span>
                         <span class="love"><i>800</i>元</span>
                     </div>
                 </label>
             </div>
-
-            <div class="input-control">
+            <div class="input-control1 ">
                 <label for="diymoney" class="diymoney-label">自定义金额</label>
                 <div class="diymoeny-value">
                     <input type="text" placeholder="0" id="diymoney" class="number" name="money">
-                    元
+                   <span> 元</span>
                 </div>
-                <div class="tips">请点击上方图书数量进行选赠或自定义金额</div>
             </div>
 
             <div class="input-control">
@@ -107,11 +104,11 @@
 
                 <label for="phone" class="diymoney-label margin20">手机号</label>
                 <div class="diymoeny-value">
-                    <input type="text" name="phone" placeholder="" class="phone" id="phone">
+                    <input type="text" name="phone" placeholder="请填写您的手机号" class="phone" id="phone">
                 </div>
             </div>
 
-            <div class="input-control">
+            <div class="input-control border10" >
                 <label class="is-need-receipt">
                     <div>捐款成功后，如需收据请勾选</div>
                     <div class="receipt-value">
@@ -119,6 +116,11 @@
                         <div></div>
                     </div>
                 </label>
+                <div class="tip-message receipt-hook">
+                    1、1000元以内的捐款，您可索取捐贈纪念卡<br/><br/>
+                    2、1000元以上(含1000元)的捐款，您可索取捐贈票据以及
+证书，请留下您的详细信息地址(精确至门牌号）
+                </div>
 
                 <label for="phone" class="diymoney-label margin20 required receipt-hook">收据抬头</label>
                 <div class="diymoeny-value receipt-hook">
@@ -149,7 +151,7 @@
     <script src="./js/jquery.validate.min.js"></script>
     <script>
         window.onload = function () {
-            
+
             $("#receipt").change(function (e) {
                 if ($(this).prop('checked')) {
                     $('.receipt-hook').css('display', 'block')
