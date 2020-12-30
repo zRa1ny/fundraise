@@ -98,15 +98,16 @@ img {
     background: #F5F7F9;
     background-size: 100% 100%;
 
-    >.banner{
+    >.banner {
         width: 100%;
         height: auto;
+
         >img {
             width: 100%;
             height: auto;
         }
     }
-    
+
 
     .cumulative {
         width: 100%;
@@ -339,13 +340,40 @@ img {
     >.introduce {
         margin-top: 0.5rem;
         background: linear-gradient(180deg, #EBF6FF 20%, transparent 0), linear-gradient(90deg, #EBF6FF 20%, transparent 0);
-        background-size: 0.9375rem 0.9375rem;
+        background-size: 0.5625rem 0.5625rem;
         background-color: #fff;
         padding-bottom: 4.9375rem;
         width: 100%;
 
         >img {
             width: 100%;
+        }
+    }
+
+    >.introduce-common {
+        margin-top: 0.5rem;
+        background: linear-gradient(180deg, #EBF6FF 20%, transparent 0), linear-gradient(90deg, #EBF6FF 20%, transparent 0);
+        background-size: 0.5625rem 0.5625rem;
+        background-color: #fff;
+        padding:1.375rem 2.375rem 4.9375rem;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0;
+        >p {
+            font-size: 0.75rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #000000;
+            line-height: 1.375rem;
+            text-indent: 2em;
+            line-height: 1.8;
+            margin: 0.5rem 0;
+            text-align: justify;
+        }
+
+        >img {
+            width: 100%;
+            margin: 0.5rem 0;
         }
     }
 
@@ -703,13 +731,14 @@ img {
             margin-top: 1.25rem;
             position: relative;
             display: none;
-            &::after{
+
+            &::after {
                 content: "";
                 display: block;
-                border-top: 0.9375rem solid transparent ;
-                border-left: 0.9375rem solid transparent ;
-                border-right: 0.9375rem solid transparent ;
-                border-bottom: 0.9375rem solid #E6432F ;
+                border-top: 0.9375rem solid transparent;
+                border-left: 0.9375rem solid transparent;
+                border-right: 0.9375rem solid transparent;
+                border-bottom: 0.9375rem solid #E6432F;
                 position: absolute;
                 right: 0.6875rem;
                 top: -1.7188rem;
