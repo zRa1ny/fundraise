@@ -1,266 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- 制作人信息 -->
     <!--PM:[xxx] Designer:[xxx] Developer:[] date:2018xxxx-->
     <title>希望工程</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="pragma" content="no-cach">
-    <meta name="robots" content="all">
-    <meta http-equiv="x-rim-auto-match" content="none">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="format-detection" content="email=no">
-    <meta name="format-detection" content="address=no">
-    <meta name="format-detection" content="date=no">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/reset.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="pragma" content="no-cach" />
+    <meta name="robots" content="all" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="date=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/reset.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="js/main.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="loading" id="loading">
-        <div class="loadbox">
-            <div class="loadtext">loading</div>
-            <div class="circle1"></div>
-            <div class="circle2"></div>
-        </div>
+      <div class="loadbox">
+        <div class="loadtext">loading</div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+      </div>
     </div>
     <div class="page-L swiper-no-swiping" id="page3">
-        <div class="banner-box">
-            <h5>为孩子们的“悦”读角捐赠一本书</h5>
-            <div class="progress">
-                <img src="./images/yes.png" alt="" srcset="">
-                <div class="progress-pipe" data-value="400">
-                    <div class="progress-bar" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="message">
-                <span>筹款目标：12,000元 </span>
-                <span>累计筹款：11,000元 </span>
-                <span>参与人次：1,001人</span>
-            </div>
+      <div class="banner-box">
+        <div class="content-box">心愿是多种多样的，每个人在不同…</div>
+      </div>
+      <form action="./look.html" method="get" id="myform">
+        
+        <div class="showmoney">
+            <p>22.00<span>元</span></p>
+            <div>心愿金额</div>
         </div>
-        <form action="./certificate.html" method="get" id="myform">
-            <div class="label-text">请选择金额</div>
-            <div class="form-control">
-                <label class="radio-item">
-                    <input class="money-set" name="money-set" type="radio" value="20" />
-                    <div class="radio-symbol">
-                        <span class="love"><i>20</i>元</span>
-                    </div>
-                </label>
-                <label class="radio-item">
-                    <input class="money-set" name="money-set" type="radio" value="40" />
-                    <div class="radio-symbol">
-                        <span class="love"><i></i>40元</span>
-                    </div>
-                </label>
+        <div class="input-control">
+          <label for="name" class="diymoney-label">姓名</label>
+          <div class="diymoeny-value">
+            <input type="text" name="name" placeholder="" id="name" />
+          </div>
 
-                <label class="radio-item">
-                    <input class="money-set" name="money-set" type="radio" value="80" />
-                    <div class="radio-symbol">
-                        <span class="love"><i>80</i>元</span>
-                    </div>
-                </label>
-                <label class="radio-item">
-                    <input class="money-set" name="money-set" type="radio" value="120" />
-                    <div class="radio-symbol">
+          <label for="phone" class="diymoney-label margin20">手机号</label>
+          <div class="diymoeny-value">
+            <input
+              type="text"
+              name="phone"
+              placeholder="请填写您的手机号"
+              class="phone"
+              id="phone"
+            />
+          </div>
+        </div>
 
-                        <span class="love"><i>120</i>元</span>
-                    </div>
-                </label>
-                <label class="radio-item">
-                    <input class="money-set" name="money-set" type="radio" value="400" />
-                    <div class="radio-symbol">
-
-                        <span class="love"><i>400</i>元</span>
-                    </div>
-                </label>
-                <label class="radio-item">
-                    <input class="money-set" name="money-set" type="radio" value="800" />
-                    <div class="radio-symbol">
-                        <span class="love"><i>800</i>元</span>
-                    </div>
-                </label>
+        <div class="input-control border10">
+          <label class="is-need-receipt">
+            <div>捐款成功后，如需收据请勾选</div>
+            <div class="receipt-value">
+              <input type="checkbox" name="receipt" id="receipt" />
+              <div></div>
             </div>
-            <div class="input-control1 ">
-                <label for="diymoney" class="diymoney-label">自定义金额</label>
-                <div class="diymoeny-value">
-                    <input type="text" placeholder="0" id="diymoney" class="number" name="money">
-                   <span> 元</span>
-                </div>
-            </div>
-            <div class="input-control1 ">
-                <label for="message" class="diymoney-label">我要留言</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-            </div>
-            <div class="input-control">
-                <label for="name" class="diymoney-label">姓名</label>
-                <div class="diymoeny-value">
-                    <input type="text" name="name" placeholder="" id="name">
-                </div>
+          </label>
+          <div class="tip-message receipt-hook">
+            1、1000元以内的捐款，您可索取捐贈纪念卡<br /><br />
+            2、1000元以上(含1000元)的捐款，您可索取捐贈票据以及
+            证书，请留下您的详细信息地址(精确至门牌号）
+          </div>
 
-                <label for="phone" class="diymoney-label margin20">手机号</label>
-                <div class="diymoeny-value">
-                    <input type="text" name="phone" placeholder="请填写您的手机号" class="phone" id="phone">
-                </div>
-            </div>
+          <label
+            for="phone"
+            class="diymoney-label margin20 required receipt-hook"
+            >收据抬头</label
+          >
+          <div class="diymoeny-value receipt-hook">
+            <input type="text" placeholder="请填写收据抬头" name="invoice" />
+          </div>
 
-            <div class="input-control border10" >
-                <label class="is-need-receipt">
-                    <div>捐款成功后，如需收据请勾选</div>
-                    <div class="receipt-value">
-                        <input type="checkbox" name="receipt" id="receipt">
-                        <div></div>
-                    </div>
-                </label>
-                <div class="tip-message receipt-hook">
-                    1、1000元以内的捐款，您可索取捐贈纪念卡<br/><br/>
-                    2、1000元以上(含1000元)的捐款，您可索取捐贈票据以及
-证书，请留下您的详细信息地址(精确至门牌号）
-                </div>
+          <label
+            for="phone"
+            class="diymoney-label margin20 required receipt-hook"
+            >详细地址</label
+          >
+          <div class="diymoeny-value receipt-hook">
+            <input type="text" placeholder="请填写详细地址" name="adress" />
+          </div>
 
-                <label for="phone" class="diymoney-label margin20 required receipt-hook">收据抬头</label>
-                <div class="diymoeny-value receipt-hook">
-                    <input type="text" placeholder="请填写收据抬头" name="invoice">
-                </div>
+          <label
+            for="phone"
+            class="diymoney-label margin20 required receipt-hook"
+            >收据收件人</label
+          >
+          <div class="diymoeny-value receipt-hook">
+            <input
+              type="text"
+              placeholder="请填写收据收件人"
+              name="receiptname"
+            />
+          </div>
 
-                <label for="phone" class="diymoney-label margin20 required receipt-hook">详细地址</label>
-                <div class="diymoeny-value receipt-hook">
-                    <input type="text" placeholder="请填写详细地址" name="adress">
-                </div>
-
-                <label for="phone" class="diymoney-label margin20 required receipt-hook">收据收件人</label>
-                <div class="diymoeny-value receipt-hook">
-                    <input type="text" placeholder="请填写收据收件人" name="receiptname">
-                </div>
-
-                <label for="phone" class="diymoney-label margin20 required receipt-hook">收件人电话</label>
-                <div class="diymoeny-value receipt-hook">
-                    <input type="text" placeholder="请填写收件人电话" name="receiptphone">
-                </div>
-            </div>
-            <div class="submit-text">
-                <button>确认捐款</button>
-            </div>
-        </form>
+          <label
+            for="phone"
+            class="diymoney-label margin20 required receipt-hook"
+            >收件人电话</label
+          >
+          <div class="diymoeny-value receipt-hook">
+            <input
+              type="text"
+              placeholder="请填写收件人电话"
+              name="receiptphone"
+            />
+          </div>
+        </div>
+        <div class="submit-text">
+          <button>确认捐款</button>
+        </div>
+      </form>
     </div>
     <script src="./js/jquery-1.10.1.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
     <script>
-        window.onload = function () {
+      window.onload = function () {
+        $('#receipt').change(function (e) {
+          if ($(this).prop('checked')) {
+            $('.receipt-hook').css('display', 'block')
+          } else {
+            $('.receipt-hook').hide()
+          }
+        })
 
-            $("#receipt").change(function (e) {
-                if ($(this).prop('checked')) {
-                    $('.receipt-hook').css('display', 'block')
-                } else {
-                    $('.receipt-hook').hide()
-                }
-            })
+        $.validator.addMethod('phone', function (value, element) {
+          return /^1[3456789][0-9]{9}$/.test(value)
+        })
 
-            $('.money-set').change(function (e) {
-                if ($(this).prop('checked')) {
-                    $('input[name=money]').val($(this).val())
-                }
-            })
+        $.validator.addMethod('invoice', function (value, element) {
+          return isNeedReceipt() || value
+        })
 
-            $('#diymoney').change(function (e) {
-                var value = $(this).val();
-                $('.money-set').each(function (idx, val) {
-                    if ($(val).val() === value) {
-                        $(val).prop('checked', true)
-                    } else {
-                        $(val).prop('checked', false)
-                    }
-                })
-            })
+        $.validator.addMethod('receiptphone', function (value, element) {
+          return isNeedReceipt() || /^1[3456789][0-9]{9}$/.test(value)
+        })
 
-            $.validator.addMethod("phone", function (value, element) {
-                return /^1[3456789][0-9]{9}$/.test(value)
-            })
-
-            $.validator.addMethod("invoice", function (value, element) {
-                return isNeedReceipt() || value
-            })
-
-            $.validator.addMethod("receiptphone", function (value, element) {
-                return isNeedReceipt() || /^1[3456789][0-9]{9}$/.test(value)
-            })
-
-            function isNeedReceipt() {
-                return !$('#receipt').prop('checked')
-            }
-
-            var validate = $("#myform").validate({
-                debug: true,
-                focusInvalid: false,
-                onkeyup: false,
-                submitHandler: function (form) {
-                    form.submit();
-                },
-                rules: {
-                    money: {
-                        required: true
-                    },
-                    message: {
-                        required: true
-                    },
-                    name: {
-                        required: true
-                    },
-                    phone: {
-                        required: true
-                    },
-                    invoice: {
-                        invoice: true
-                    },
-                    adress: {
-                        invoice: true
-                    },
-                    receiptname: {
-                        invoice: true
-                    },
-                    receiptphone: {
-                        receiptphone: true
-                    },
-
-                },
-                messages: {
-                    money: {
-                        required: "必填",
-                        number: "必须输入数值！"
-                    },
-                    message:{
-                        required: "必填",
-                    },
-                    name: {
-                        required: "必填",
-                    },
-                    phone: {
-                        required: "必填",
-                        phone: "请正确输入手机号码"
-                    },
-                    invoice: {
-                        invoice: "必填"
-                    },
-                    adress: {
-                        invoice: "必填"
-                    },
-                    receiptname: {
-                        invoice: "必填"
-                    },
-                    receiptphone: {
-                        receiptphone: "输入手机号"
-                    },
-                }
-            });
+        function isNeedReceipt() {
+          return !$('#receipt').prop('checked')
         }
-    </script>
-</body>
 
+        var validate = $('#myform').validate({
+          debug: true,
+          focusInvalid: false,
+          onkeyup: false,
+          submitHandler: function (form) {
+            form.submit()
+          },
+          rules: {
+           
+            name: {
+              required: true,
+            },
+            phone: {
+              required: true,
+            },
+            invoice: {
+              invoice: true,
+            },
+            adress: {
+              invoice: true,
+            },
+            receiptname: {
+              invoice: true,
+            },
+            receiptphone: {
+              receiptphone: true,
+            },
+          },
+          messages: {
+           
+            name: {
+              required: '必填',
+            },
+            phone: {
+              required: '必填',
+              phone: '请正确输入手机号码',
+            },
+            invoice: {
+              invoice: '必填',
+            },
+            adress: {
+              invoice: '必填',
+            },
+            receiptname: {
+              invoice: '必填',
+            },
+            receiptphone: {
+              receiptphone: '输入手机号',
+            },
+          },
+        })
+      }
+    </script>
+  </body>
 </html>

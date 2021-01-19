@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 制作人信息 -->
+    <!--PM:[xxx] Designer:[xxx] Developer:[] date:2018xxxx-->
+    <title>希望工程</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="pragma" content="no-cach" />
+    <meta name="robots" content="all" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="date=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/reset.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="loading" id="loading">
+      <div class="loadbox">
+        <div class="loadtext">loading</div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+      </div>
+    </div>
+
+    <div class="page-L swiper-no-swiping bbox" id="listPage">
+      <div class="banner"></div>
+      <div class="tabs">
+        <div>
+          <p>12<span>个</span></p>
+          <p>未完成心愿</p>
+        </div>
+        <div>
+          <p>100<span>个</span></p>
+          <p>已完成心愿</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="select-box">
+          <select name="" id="twon"></select>
+          <div></div>
+          <select name="" id="street">
+            <option value="">街道/镇</option>
+          </select>
+        </div>
+        <ul id="list-wrap"></ul>
+      </div>
+    </div>
+    <script src="./js/jquery-1.10.1.min.js"></script>
+    <script>
+      var data = {
+          黄浦区:
+            '南京东路,外滩,瑞金二路,淮海中路,豫园,打浦桥,老西门,小东门,五里桥,半淞园路',
+          徐汇区: '湖南路,天平路,枫林路',
+        },
+        $twon = $('#twon'),
+        $street = $('#street'),
+        twonOpts = ['<option value="">区县</option>']
+      for (var key in data) {
+        twonOpts.push(`<option value="${key}">${key}</option>`)
+      }
+      $twon.html(twonOpts.join(''))
+      $twon.change(function () {
+        $street.val('')
+        var val = $(this).val()
+        if (!val) {
+          $street.html('<option value="">街道/镇</option>')
+          return
+        }
+        var opts = renderOpts(data[val])
+        opts.unshift('<option value="">街道/镇</option>')
+        $street.html(opts)
+      })
+      $street.change(function () {
+        loadList()
+      })
+      function renderOpts(str) {
+        return str.split(',').map(function (val) {
+          return `<option value="${val}">${val}</option>`
+        })
+      }
+      loadList()
+      function loadList() {
+        $.ajax({
+          dataType: 'json',
+          url: './list.json',
+          cache: false,
+          type: 'get',
+          data: {
+            twon: $twon.val(),
+            street: $twon.val(),
+          },
+          success: function (res) {
+            if (res.success) {
+              var items = renderList(res.data)
+              items.push('<li class="loadmore">查看更多</li>')
+              $('#list-wrap').html(items.join(''))
+            } else {
+              alert(res.errMsg ? res.errMsg : JSON.stringify(res))
+            }
+          },
+          error: function (res) {
+            alert(res.errMsg ? res.errMsg : JSON.stringify(res))
+          },
+        })
+      }
+      function renderList(arr) {
+        return arr.map(function (value) {
+          return `
+            <li class="${value.page == 1 ? '' : 'notfirst'}">
+            <div>${value.name}</div>
+            <a href="./pay.html">
+              <h3>${value.wish}</h3>
+              <p>
+                心愿金额 <span>${value.money}<span>元</span></span>
+              </p>
+            </a>
+          </li>
+            `
+        })
+      }
+    </script>
+    <script>
+      $('#list-wrap').on('click', '.loadmore', function () {
+        $('.notfirst').css('display', 'flex')
+        $(this).hide()
+      })
+    </script>
+  </body>
+</html>
