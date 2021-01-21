@@ -277,7 +277,7 @@ img {
 #listPage > .box > ul > li > a:nth-child(2) > p > span > span {
   font-size: 0.625rem;
 }
-#listPage > .box > ul > li.itemed > div:nth-child(2) {
+#listPage > .box > ul > li.itemed > a:nth-child(2) {
   background: url(../images/water.png) no-repeat;
   background-color: #f5f9fa;
   background-size: 3.125rem auto;

@@ -118,9 +118,9 @@
         function renderList(arr) {
           return arr.map(function (value) {
             return `
-              <li class="${value.page == 1 ? '' : 'notfirst'}">
+              <li class="${value.page == 1 ? 'itemed' : 'notfirst itemed' }">
               <div>${value.name}</div>
-              <a href="./look.html">
+              <a href="./look.html" >
                 <h3>${value.wish}</h3>
                 <p>
                   心愿金额 <span>${value.money}<span>元</span></span>
