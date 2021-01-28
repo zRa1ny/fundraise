@@ -33,15 +33,49 @@
     </div>
     <div class="page-L swiper-no-swiping" id="page3">
       <div class="banner-box">
-        <div class="content-box">心愿是多种多样的，每个人在不同…</div>
+        <div class="content-box">
+          <h3 style="background-image: url(../images/head.png)">
+            <span>小豆丁</span>
+            <span>1岁</span>
+            <span>长宁区</span>
+          </h3>
+          <div>
+            <span>“</span>
+            <span
+              >心愿是多种多样的，每个人在不通心愿是多种多样的，每个人在不通</span
+            >
+            <span>”</span>
+          </div>
+        </div>
       </div>
-      <form action="./look.html" method="get" id="myform">
-        
+      <div class="banner-box notshow">
+        <div class="content-box">
+          <h3 style="background-image: url(../images/head.png)">
+            <span>小豆丁</span>
+            <span>1岁</span>
+            <span>长宁区</span>
+          </h3>
+          <div>
+            <span>“</span>
+            <span
+              >心愿是多种多样的，每个人在不通心愿是多种多样的，每个人在不通</span
+            >
+            <span>”</span>
+          </div>
+        </div>
+      </div>
+      <div class="loadmore">查看更多</div>
+      <form action="./payafter.html" method="get" id="myform">
         <div class="showmoney">
-            <p>22.00<span>元</span></p>
-            <div>心愿金额</div>
+          <p>22.00<span>元</span></p>
+          <div>心愿总金额</div>
         </div>
         <div class="input-control">
+          <label for="message" class="diymoney-label">给受助青少年的寄语</label>
+          <div class="message-value">
+            <textarea name="message" placeholder="" id="message"></textarea>
+          </div>
+
           <label for="name" class="diymoney-label">姓名</label>
           <div class="diymoeny-value">
             <input type="text" name="name" placeholder="" id="name" />
@@ -126,6 +160,10 @@
     <script src="./js/jquery.validate.min.js"></script>
     <script>
       window.onload = function () {
+        $('.loadmore').click(function () {
+          $(this).hide()
+          $('.notshow').removeClass('notshow')
+        })
         $('#receipt').change(function (e) {
           if ($(this).prop('checked')) {
             $('.receipt-hook').css('display', 'block')
@@ -158,7 +196,9 @@
             form.submit()
           },
           rules: {
-           
+            message: {
+              required: true,
+            },
             name: {
               required: true,
             },
@@ -179,7 +219,9 @@
             },
           },
           messages: {
-           
+            message: {
+              required: '必填',
+            },
             name: {
               required: '必填',
             },

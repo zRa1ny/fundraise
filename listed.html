@@ -47,11 +47,8 @@
       <div class="box">
         <div class="select-box">
           <select name="" id="twon">
-            <option value="">区县</option>
-          </select>
-          <div></div>
-          <select name="" id="street">
             <option value="">街道/镇</option>
+            <option value="黄浦区">黄浦区</option>
           </select>
         </div>
         <ul id="list-wrap"></ul>
@@ -59,80 +56,66 @@
     </div>
     <script src="./js/jquery-1.10.1.min.js"></script>
     <script>
-        var data = {
-            黄浦区:
-              '南京东路,外滩,瑞金二路,淮海中路,豫园,打浦桥,老西门,小东门,五里桥,半淞园路',
-            徐汇区: '湖南路,天平路,枫林路',
-          },
-          $twon = $('#twon'),
-          $street = $('#street'),
-          twonOpts = ['<option value="">区县</option>']
-        for (var key in data) {
-          twonOpts.push(`<option value="${key}">${key}</option>`)
-        }
-        $twon.html(twonOpts.join(''))
-        $twon.change(function () {
-          $street.val('')
-          var val = $(this).val()
-          if (!val) {
-            $street.html('<option value="">街道/镇</option>')
-            return
-          }
-          var opts = renderOpts(data[val])
-          opts.unshift('<option value="">街道/镇</option>')
-          $street.html(opts)
-        })
-        $street.change(function () {
-          loadList()
-        })
-        function renderOpts(str) {
-          return str.split(',').map(function (val) {
-            return `<option value="${val}">${val}</option>`
-          })
-        }
+      $('#twon').change(function () {
         loadList()
-        function loadList() {
-          $.ajax({
-            dataType: 'json',
-            url: './list.json',
-            cache: false,
-            type: 'get',
-            data: {
-              twon: $twon.val(),
-              street: $twon.val(),
-            },
-            success: function (res) {
-              if (res.success) {
-                var items = renderList(res.data)
-                items.push('<li class="loadmore">查看更多</li>')
-                $('#list-wrap').html(items.join(''))
-              } else {
-                alert(res.errMsg ? res.errMsg : JSON.stringify(res))
-              }
-            },
-            error: function (res) {
+      })
+      loadList()
+      function loadList() {
+        $.ajax({
+          dataType: 'json',
+          url: './list.json',
+          cache: false,
+          type: 'get',
+          data: {
+            twon: $('#twon').val(),
+          },
+          success: function (res) {
+            if (res.success) {
+              var items = renderList(res.data)
+              items.push('<li class="loadmore">查看更多</li>')
+              $('#list-wrap').html(items.join(''))
+            } else {
               alert(res.errMsg ? res.errMsg : JSON.stringify(res))
-            },
-          })
-        }
-        function renderList(arr) {
-          return arr.map(function (value) {
-            return `
-              <li class="${value.page == 1 ? 'itemed' : 'notfirst itemed' }">
-              <div>${value.name}</div>
-              <a href="./look.html" >
-                <h3>${value.wish}</h3>
+            }
+          },
+          error: function (res) {
+            alert(res.errMsg ? res.errMsg : JSON.stringify(res))
+          },
+        })
+      }
+
+      function jump(id) {
+        location.href = `./look.html?id=${id}`
+      }
+      function renderList(arr) {
+        return arr.map(function (value) {
+          return `
+              <li class="${
+                value.page == 1 ? 'itemed' : 'notfirst itemed'
+              }" onclick="jump('${value.id}')">
+                <div>
+                 <div  style="background-image:url(${value.headImg})"></div>
+                 
+            </div>
+            <div >
+               <div>
+                <h3>
+                    <span>${value.name}</span> 
+                    <span>${value.age}岁</span> 
+                    <span>${value.area}</span>
+                </h3>
                 <p>
-                  心愿金额 <span>${value.money}<span>元</span></span>
+                    “${value.wish}”
                 </p>
-              </a>
+                </div>
+            </div>
             </li>
               `
-          })
-        }
-      </script>
+        })
+      }
+    </script>
     <script>
-       $('#list-wrap').on('click', '.loadmore', function () {
+      $('#list-wrap').on('click', '.loadmore', function () {
         $('.notfirst').css('display', 'flex')
         $(this).hide()
       })

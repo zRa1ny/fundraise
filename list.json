@@ -2,59 +2,53 @@
     "success":1,
     "data":[
         {
+            "id":1,
             "name":"小豆丁",
             "wish":"有一本小字典",
             "money":22,
-            "page":1
+            "page":1,
+            "headImg":"../images/head.png",
+            "age":1,
+            "area":"长宁区"
         },
         {
+            "id":2,
             "name":"小豆丁",
             "wish":"有一本小字典",
             "money":22,
-            "page":1
+            "page":1,
+            "headImg":"../images/head.png",
+            "age":1,
+            "area":"长宁区"
         },
         {
+            "id":3,
             "name":"小豆丁",
             "wish":"有一本小字典",
             "money":22,
-            "page":1
-        },
-        {
+            "page":1,
+            "headImg":"../images/head.png",
+            "age":1,
+            "area":"长宁区"
+        },  {
+            "id":4,
             "name":"小豆丁",
             "wish":"有一本小字典",
             "money":22,
-            "page":1
-        }, {
+            "page":1,
+            "headImg":"../images/head.png",
+            "age":1,
+            "area":"长宁区"
+        },  {
+            "id":5,
             "name":"小豆丁",
             "wish":"有一本小字典",
             "money":22,
-            "page":1
-        }, {
-            "name":"小豆丁",
-            "wish":"有一本小字典",
-            "money":22,
-            "page":1
+            "page":2,
+            "headImg":"../images/head.png",
+            "age":1,
+            "area":"长宁区"
         }
-        , {
-            "name":"小豆丁2",
-            "wish":"有一本小字典",
-            "money":22,
-            "page":2
-        }, {
-            "name":"小豆丁2",
-            "wish":"有一本小字典",
-            "money":22,
-            "page":2
-        }, {
-            "name":"小豆丁2",
-            "wish":"有一本小字典",
-            "money":22,
-            "page":2
-        }, {
-            "name":"小豆丁2",
-            "wish":"有一本小字典",
-            "money":22,
-            "page":2
-        }
+       
     ]
 }
